@@ -11,9 +11,9 @@ module "storage_account" {
   storage_account_name = "hugocoderstorage"
   container_name       = "$web"
 
-  blob_name            = "index.html"
-  blob_source          = "./website/index.html"
-  blob_content_type    = "text/html"
+  blob_name         = "index.html"
+  blob_source       = "./website/index.html"
+  blob_content_type = "text/html"
 }
 
 resource "azurerm_dns_cname_record" "personal_static_website" {
