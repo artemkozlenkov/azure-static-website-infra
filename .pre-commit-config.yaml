@@ -6,21 +6,16 @@ repos:
         name: terraform fmt
         description: Format Terraform files using terraform fmt
         files: \.(tf|tfvars)$
-        stages: [commit]
-        args: ["-diff", "-check"]
       - id: terraform_validate
         name: terraform validate
         description: Validate Terraform files
         files: \.(tf|tfvars)$
-        stages: [commit]
       - id: terraform_tflint
         name: terraform tflint
         description: Lint Terraform files
         files: \.(tf|tfvars)$
-        stages: [commit]
         args: ["--init"]
       - id: terraform_docs
         name: terraform docs
         description: Generate Terraform module documentation
         files: \.(tf|tfvars)$
-        stages: [commit]
